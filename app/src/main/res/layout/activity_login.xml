@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <TextView
         android:id="@+id/textViewTitulo"
@@ -16,7 +16,7 @@
         android:background="@color/colorPrimary"
         android:layout_marginTop="32dp"
         android:textSize="16pt"
-        android:text="Cadastro de Aluno"
+        android:text="Cadastro do Cliente"
         android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,7 +26,7 @@
         android:id="@+id/editTextUsuário"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário"
+        android:hint="Usuário do Cliente"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="150dp"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Senha"
+        android:hint="Senha do Cliente"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="32dp"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:onClick="novo Cadastro"
         android:layout_marginTop="32dp"
-        android:text="Caso não tenha cadastro, clique aqui"
+        android:text="Para Fazer um novo cadastro, clique aqui"
         android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

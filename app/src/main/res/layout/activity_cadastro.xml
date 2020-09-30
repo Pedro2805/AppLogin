@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroActivity">
+    tools:context=".ui.CadastroActivity">
 
     <TextView
         android:id="@+id/textViewTitulo"
@@ -16,7 +16,7 @@
         android:background="@color/colorPrimary"
         android:layout_marginTop="32dp"
         android:textSize="12pt"
-        android:text="Formulário de Cadastro"
+        android:text="Novo Cadastro"
         android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -74,6 +74,21 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail"/>
+
+
+    <EditText
+        android:id="@+id/editTextConfirmaçãoSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Confirmação da Senha"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha"/>
+
 
 
 

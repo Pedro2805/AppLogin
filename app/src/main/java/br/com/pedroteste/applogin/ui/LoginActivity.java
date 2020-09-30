@@ -1,4 +1,4 @@
-package br.com.pedroteste.applogin;
+package br.com.pedroteste.applogin.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.orhanobut.hawk.Hawk;
+
+import br.com.pedroteste.applogin.R;
 
 public class LoginActivity extends AppCompatActivity {
 
