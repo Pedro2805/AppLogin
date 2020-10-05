@@ -1,11 +1,15 @@
 package br.com.pedroteste.applogin.ui;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.orhanobut.hawk.Hawk;
@@ -16,6 +20,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView textViewNovoCadastro;
     private Button buttonLogin;
+    private UsuarioViewModel usuarioViewModel;
+    private Usuario usuarioCorrente;
+    private EditText editTextEmail;
+    private EditText editTextSenha;
 
 
     @Override
@@ -23,10 +31,27 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Hawk.init(this).build();
+        editTextEmail = findViewById(R.id.editTextUsuário);
+        editTextSenha = findViewById(R.id.editTextSenha);
 
         textViewNovoCadastro = findViewById(R.id.textViewNovoCadastro);
         buttonLogin = findViewById(R.id.buttonLogin);
 
+        usuarioCorrente = new Usuario();
+
+
+        usuarioViewModel = new ViewModelProvider(this).get(UsuarioViewModel.class);
+        usuarioViewModel.getUsuario().observe(this, new Observer<Usuario>() {
+            @Override
+            public void onChanged(@Nullable final Usuario usuario) {
+                updateUsuario(usuario);
+            }
+        });
+
+    }
+
+    private void updateUsuario(Usuario usuario) {
+        this.usuarioCorrente = usuario;
     }
 
     @Override
